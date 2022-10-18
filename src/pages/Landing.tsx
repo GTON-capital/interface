@@ -3,13 +3,17 @@ import { ButtonPrimary, ButtonSecondary } from 'components/Button'
 import { AutoRow } from 'components/Row'
 import React, { useEffect } from 'react'
 import { useLandingIsOpen, useToggleLanding } from 'state/application/hooks'
+import { useIsDarkMode } from 'state/user/hooks'
 import styled from 'styled-components/macro'
 
-const PageWrapper = styled.span<{ visible: boolean }>`
+const PageWrapper = styled.span<{ visible: boolean; isDarkMode: boolean }>`
   width: 100%;
   height: calc(100vh - 72px);
   position: absolute;
-  background: linear-gradient(rgba(8, 10, 24, 0) 9.84%, rgb(8 10 24 / 76%) 35.35%);
+  background: ${({ isDarkMode }) =>
+    isDarkMode
+      ? 'linear-gradient(rgba(8, 10, 24, 0) 9.84%, rgb(8 10 24 / 86%) 35.35%)'
+      : 'linear-gradient(rgba(8, 10, 24, 0) 9.84%, rgb(255 255 255 / 86%) 35.35%)'};
   padding: 5rem;
   z-index: ${({ visible }) => (visible ? '999' : '-1')};
   display: flex;
@@ -44,6 +48,7 @@ const ContentWrapper = styled.span`
 export default function Landing() {
   const open = useLandingIsOpen()
   const toggleLanding = useToggleLanding(false)
+  const isDarkMode = useIsDarkMode()
 
   const { account } = useWeb3React()
 
@@ -54,7 +59,7 @@ export default function Landing() {
   }, [account, toggleLanding])
 
   return (
-    <PageWrapper visible={open}>
+    <PageWrapper isDarkMode={isDarkMode} visible={open}>
       <ContentWrapper>
         <TitleText>Trade crypto and NFTs confidently</TitleText>
         <SubText>Swap tokens with the deepest liquidity and buy NFTs at the best prices.</SubText>
