@@ -8,7 +8,7 @@ import { Row } from 'nft/components/Flex'
 import { UniIcon } from 'nft/components/icons'
 import { ReactNode } from 'react'
 import { NavLink, NavLinkProps, useLocation } from 'react-router-dom'
-import { useLandingIsOpen, useToggleLanding } from 'state/application/hooks'
+import { useToggleLanding } from 'state/application/hooks'
 
 import { ChainSelector } from './ChainSelector'
 import { MenuDropdown } from './MenuDropdown'
@@ -76,15 +76,15 @@ const Navbar = () => {
   const { pathname } = useLocation()
   const showShoppingBag = pathname.startsWith('/nfts') || pathname.startsWith('/profile')
 
-  const open = useLandingIsOpen()
-  const toggleLanding = useToggleLanding(!open)
+  // const open = useLandingIsOpen()
+  const toggleLanding = useToggleLanding(true)
 
   return (
     <>
       <nav className={styles.nav}>
         <Box display="flex" height="full" flexWrap="nowrap" alignItems="stretch">
           <Box className={styles.leftSideContainer}>
-            <Box as="a" className={styles.logoContainer} onClick={() => toggleLanding()}>
+            <Box as="a" href="#/swap" className={styles.logoContainer} onClick={() => toggleLanding()}>
               <UniIcon width="48" height="48" className={styles.logo} />
             </Box>
             <Box display={{ sm: 'flex', lg: 'none' }}>

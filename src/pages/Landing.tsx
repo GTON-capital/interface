@@ -9,7 +9,7 @@ const PageWrapper = styled.span<{ visible: boolean }>`
   width: 100%;
   height: calc(100vh - 72px);
   position: absolute;
-  background: linear-gradient(180deg, rgba(8, 10, 24, 0) 9.84%, #080a18 35.35%);
+  background: linear-gradient(rgba(8, 10, 24, 0) 9.84%, rgb(8 10 24 / 76%) 35.35%);
   padding: 5rem;
   z-index: ${({ visible }) => (visible ? '999' : '-1')};
   display: flex;
@@ -24,6 +24,7 @@ const PageWrapper = styled.span<{ visible: boolean }>`
 const TitleText = styled.h1`
   font-size: 72px;
   font-weight: 600;
+  margin-bottom: 0px;
 `
 
 const SubText = styled.h3`
