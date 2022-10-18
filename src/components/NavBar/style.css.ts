@@ -22,6 +22,7 @@ export const logoContainer = style([
     display: 'flex',
     marginRight: { sm: '12', xxl: '20' },
     alignItems: 'center',
+    cursor: 'pointer',
   }),
 ])
 

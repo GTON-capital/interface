@@ -24,11 +24,14 @@ interface MenuItemProps {
 }
 
 const MenuItem = ({ href, id, isActive, children }: MenuItemProps) => {
+  const toggleLanding = useToggleLanding(false)
+
   return (
     <NavLink
       to={href}
       className={isActive ? styles.activeMenuItem : styles.menuItem}
       id={id}
+      onClick={() => toggleLanding()}
       style={{ textDecoration: 'none' }}
     >
       {children}
@@ -81,7 +84,7 @@ const Navbar = () => {
       <nav className={styles.nav}>
         <Box display="flex" height="full" flexWrap="nowrap" alignItems="stretch">
           <Box className={styles.leftSideContainer}>
-            <Box as="a" href="#/swap" className={styles.logoContainer} onClick={() => toggleLanding()}>
+            <Box as="a" className={styles.logoContainer} onClick={() => toggleLanding()}>
               <UniIcon width="48" height="48" className={styles.logo} />
             </Box>
             <Box display={{ sm: 'flex', lg: 'none' }}>

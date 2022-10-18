@@ -13,7 +13,7 @@ export function useLandingIsOpen(): boolean {
 export function useToggleLanding(landing: boolean): () => void {
   const isOpen = useLandingIsOpen()
   const dispatch = useAppDispatch()
-  return useCallback(() => dispatch(setOpenLanding(isOpen ? landing : landing)), [dispatch, landing, isOpen])
+  return useCallback(() => dispatch(setOpenLanding(landing)), [dispatch, landing])
 }
 
 export function useModalIsOpen(modal: ApplicationModal): boolean {

@@ -3,7 +3,6 @@ import { ButtonPrimary, ButtonSecondary } from 'components/Button'
 import { AutoRow } from 'components/Row'
 import React, { useEffect } from 'react'
 import { useLandingIsOpen, useToggleLanding } from 'state/application/hooks'
-// import { useAppSelector } from 'state/hooks'
 import styled from 'styled-components/macro'
 
 const PageWrapper = styled.span<{ visible: boolean }>`
@@ -12,7 +11,7 @@ const PageWrapper = styled.span<{ visible: boolean }>`
   position: absolute;
   background: linear-gradient(180deg, rgba(8, 10, 24, 0) 9.84%, #080a18 35.35%);
   padding: 5rem;
-  z-index: ${({ visible }) => (visible ? '999' : '1')};
+  z-index: ${({ visible }) => (visible ? '999' : '-1')};
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -42,20 +41,16 @@ const ContentWrapper = styled.span`
 `
 
 export default function Landing() {
-  // const [visible, setVisible] = useState(true)
-  // const landing = useAppSelector((state) => state.application.openLanding)
-
   const open = useLandingIsOpen()
   const toggleLanding = useToggleLanding(false)
 
   const { account } = useWeb3React()
 
   useEffect(() => {
-    // Update the document title using the browser API
     if (account !== undefined) {
       toggleLanding()
     }
-  }, [account])
+  }, [account, toggleLanding])
 
   return (
     <PageWrapper visible={open}>
