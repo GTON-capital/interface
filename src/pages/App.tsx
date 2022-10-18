@@ -10,7 +10,6 @@ import { RedesignVariant, useRedesignFlag } from 'featureFlags/flags/redesign'
 import ApeModeQueryParamReader from 'hooks/useApeModeQueryParamReader'
 import { lazy, Suspense, useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
-import { useLandingIsOpen, useToggleLanding } from 'state/application/hooks'
 import { useIsDarkMode } from 'state/user/hooks'
 import styled from 'styled-components/macro'
 import { SpinnerSVG } from 'theme/components'
@@ -125,9 +124,6 @@ export default function App() {
   const isDarkMode = useIsDarkMode()
   const isExpertMode = useIsExpertMode()
 
-  const open = useLandingIsOpen()
-  const toggleLanding = useToggleLanding(!open)
-
   useAnalyticsReporter()
   initializeAnalytics()
 
@@ -162,7 +158,7 @@ export default function App() {
       <AppWrapper redesignFlagEnabled={redesignFlagEnabled}>
         <Trace page={currentPage}>
           <HeaderWrapper>{navBarFlag === NavBarVariant.Enabled ? <NavBar /> : <Header />}</HeaderWrapper>
-          <BodyWrapper onClick={() => open && toggleLanding()} navBarFlag={navBarFlag}>
+          <BodyWrapper navBarFlag={navBarFlag}>
             <Popups />
             <Polling />
             <TopLevelModals />
