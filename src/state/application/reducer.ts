@@ -40,12 +40,14 @@ type PopupList = Array<{ key: string; show: boolean; content: PopupContent; remo
 export interface ApplicationState {
   readonly chainId: number | null
   readonly openModal: ApplicationModal | null
+  readonly openLanding: boolean
   readonly popupList: PopupList
 }
 
 const initialState: ApplicationState = {
   chainId: null,
   openModal: null,
+  openLanding: true,
   popupList: [],
 }
 
@@ -59,6 +61,9 @@ const applicationSlice = createSlice({
     },
     setOpenModal(state, action) {
       state.openModal = action.payload
+    },
+    setOpenLanding(state, action) {
+      state.openLanding = action.payload
     },
     addPopup(state, { payload: { content, key, removeAfterMs = DEFAULT_TXN_DISMISS_MS } }) {
       state.popupList = (key ? state.popupList.filter((popup) => popup.key !== key) : state.popupList).concat([
@@ -80,5 +85,5 @@ const applicationSlice = createSlice({
   },
 })
 
-export const { updateChainId, setOpenModal, addPopup, removePopup } = applicationSlice.actions
+export const { updateChainId, setOpenModal, setOpenLanding, addPopup, removePopup } = applicationSlice.actions
 export default applicationSlice.reducer

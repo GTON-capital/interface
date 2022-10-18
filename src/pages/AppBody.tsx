@@ -28,6 +28,7 @@ export const BodyWrapper = styled.main<{ margin?: string; maxWidth?: string; red
 export default function AppBody({ children, ...rest }: { children: React.ReactNode }) {
   const redesignFlag = useRedesignFlag()
   const redesignFlagEnabled = redesignFlag === RedesignVariant.Enabled
+
   return (
     <BodyWrapper {...rest} redesignFlag={redesignFlagEnabled}>
       {children}

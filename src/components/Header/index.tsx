@@ -7,6 +7,7 @@ import { darken } from 'polished'
 import { NavLink, useLocation } from 'react-router-dom'
 import { Text } from 'rebass'
 import { useShowClaimPopup, useToggleSelfClaimModal } from 'state/application/hooks'
+import { useLandingIsOpen, useToggleLanding } from 'state/application/hooks'
 import { useUserHasAvailableClaim } from 'state/claim/hooks'
 import { useNativeCurrencyBalances } from 'state/connection/hooks'
 import { useUserHasSubmittedClaim } from 'state/transactions/hooks'
@@ -261,6 +262,9 @@ export default function Header() {
 
   const { pathname } = useLocation()
 
+  const open = useLandingIsOpen()
+  const toggleLanding = useToggleLanding(!open)
+
   const {
     infoLink,
     nativeCurrency: { symbol: nativeCurrencySymbol },
@@ -278,8 +282,8 @@ export default function Header() {
   return (
     <HeaderFrame showBackground={scrollY > 45}>
       <ClaimModal />
-      <Title href=".">
-        <UniIcon>
+      <Title>
+        <UniIcon onClick={() => toggleLanding()}>
           <Logo fill={darkMode ? deprecated_white : deprecated_black} width="24px" height="100%" title="logo" />
           <HolidayOrnament />
         </UniIcon>

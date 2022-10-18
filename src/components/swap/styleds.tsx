@@ -23,7 +23,7 @@ export const PageWrapper = styled.div<{ redesignFlag: boolean; navBarFlag: boole
 `
 
 // Mostly copied from `AppBody` but it was getting too hard to maintain backwards compatibility.
-export const SwapWrapper = styled.main<{ margin?: string; maxWidth?: string; redesignFlag: boolean }>`
+export const SwapWrapper = styled.main<{ margin?: string; maxWidth?: string; redesignFlag: boolean; open: boolean }>`
   position: relative;
   background: ${({ theme, redesignFlag }) => (redesignFlag ? theme.backgroundSurface : theme.deprecated_bg0)};
   border-radius: ${({ redesignFlag }) => (redesignFlag ? '16px' : '24px')};
@@ -33,6 +33,12 @@ export const SwapWrapper = styled.main<{ margin?: string; maxWidth?: string; red
   box-shadow: ${({ redesignFlag }) =>
     !redesignFlag &&
     '0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 24px 32px rgba(0, 0, 0, 0.01)'};
+
+  cursor: ${({ open }) => (open ? 'pointer' : 'suto')};
+
+  &:hover {
+    border: 1px solid ${({ theme, open }) => (open ? theme.accentAction : theme.backgroundOutline)};
+  }
 `
 
 export const ArrowWrapper = styled.div<{ clickable: boolean; redesignFlag: boolean }>`

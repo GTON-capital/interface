@@ -3,7 +3,18 @@ import { useCallback, useMemo } from 'react'
 import { useAppDispatch, useAppSelector } from 'state/hooks'
 
 import { AppState } from '../index'
-import { addPopup, ApplicationModal, PopupContent, removePopup, setOpenModal } from './reducer'
+import { addPopup, ApplicationModal, PopupContent, removePopup, setOpenLanding, setOpenModal } from './reducer'
+
+export function useLandingIsOpen(): boolean {
+  const openLanding = useAppSelector((state: AppState) => state.application.openLanding)
+  return openLanding
+}
+
+export function useToggleLanding(landing: boolean): () => void {
+  const isOpen = useLandingIsOpen()
+  const dispatch = useAppDispatch()
+  return useCallback(() => dispatch(setOpenLanding(isOpen ? landing : landing)), [dispatch, landing, isOpen])
+}
 
 export function useModalIsOpen(modal: ApplicationModal): boolean {
   const openModal = useAppSelector((state: AppState) => state.application.openModal)
