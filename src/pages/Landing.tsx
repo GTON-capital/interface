@@ -2,6 +2,7 @@ import { useWeb3React } from '@web3-react/core'
 import { ButtonPrimary, ButtonSecondary } from 'components/Button'
 import { AutoRow } from 'components/Row'
 import React, { useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 import { useLandingIsOpen, useToggleLanding } from 'state/application/hooks'
 import { useIsDarkMode } from 'state/user/hooks'
 import styled from 'styled-components/macro'
@@ -69,9 +70,11 @@ export default function Landing() {
           <ButtonPrimary $borderRadius="12px" padding="1rem" width="content">
             <ButtonText onClick={() => toggleLanding()}>Get started</ButtonText>
           </ButtonPrimary>
-          <ButtonSecondary padding="1rem" width="content">
-            <ButtonText>Learn more</ButtonText>
-          </ButtonSecondary>
+          <NavLink to={'/about'}>
+            <ButtonSecondary onClick={() => toggleLanding()} padding="1rem" width="content">
+              <ButtonText>Learn more</ButtonText>
+            </ButtonSecondary>
+          </NavLink>
         </AutoRow>
       </ContentWrapper>
     </PageWrapper>
