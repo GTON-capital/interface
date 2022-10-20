@@ -3,7 +3,7 @@ import { Box } from 'nft/components/Box'
 import { DiscordIconMenu, GithubIconMenu, TwitterIconMenu } from 'nft/components/icons'
 import React, { useEffect } from 'react'
 import { ReactNode } from 'react'
-import { ArrowRightCircle } from 'react-feather'
+import { ArrowUpRight } from 'react-feather'
 import { useLandingIsOpen, useToggleLanding } from 'state/application/hooks'
 import { useIsDarkMode } from 'state/user/hooks'
 import styled, { useTheme } from 'styled-components/macro'
@@ -46,7 +46,7 @@ const PageWrapper = styled.span<{ visible: boolean; isDarkMode: boolean }>`
   transition: 250ms ease opacity;
 `
 
-const TitleText = styled.h1`
+const TitleText = styled.h2`
   font-size: 72px;
   font-weight: 600;
   margin-bottom: 0px;
@@ -73,15 +73,11 @@ const ContentWrapper = styled.span`
   gap: 24px;
 `
 
-const HR = styled.hr`
-  border-color: ${({ theme }) => theme.backgroundOutline};
-`
-
 const CardWrapper = styled.span`
   display: flex;
   flex-direction: row;
   gap: 12px;
-  width: 100%:
+  width: 100%;
 `
 
 const BigCard = styled.a`
@@ -125,37 +121,35 @@ export default function About() {
         <Body>
           The Uniswap Protocol is an open-source protocol for providing liquidity and trading ERC20 tokens on Ethereum.
           It eliminates trusted intermediaries and unnecessary forms of rent extraction, allowing for safe, accessible,
-          and efficient exchange activity. The protocol is non-upgradable and designed to be censorship resistant. The
-          Uniswap Protocol and the Uniswap Interface were developed by Uniswap Labs. Check out the Introduction section
-          of our docs for more info on the different roles played by Labs, the Interface, and the Protocol.
+          and efficient exchange activity.
         </Body>
 
         <CardWrapper>
           <BigCard href="https://uniswap.org">
-            Protocol
-            <ArrowRightCircle />
+            Uniswap Protocol
+            <ArrowUpRight color={theme.textTertiary} />
           </BigCard>
           <BigCard href="https://uniswap.org/blog">
             Blog
-            <ArrowRightCircle />
+            <ArrowUpRight color={theme.textTertiary} />
           </BigCard>
           <BigCard href="https://boards.greenhouse.io/uniswaplabs">
             Careers
-            <ArrowRightCircle />
+            <ArrowUpRight color={theme.textTertiary} />
           </BigCard>
         </CardWrapper>
         <CardWrapper>
           <BigCard href="https://uniswap.org">
             Support
-            <ArrowRightCircle />
+            <ArrowUpRight color={theme.textTertiary} />
           </BigCard>
           <BigCard href="https://uniswap.org/blog">
             Twitter
-            <ArrowRightCircle />
+            <ArrowUpRight color={theme.textTertiary} />
           </BigCard>
           <BigCard href="https://boards.greenhouse.io/uniswaplabs">
             Developers
-            <ArrowRightCircle />
+            <ArrowUpRight color={theme.textTertiary} />
           </BigCard>
         </CardWrapper>
         <span>
@@ -167,7 +161,9 @@ export default function About() {
           </Body>
         </span>
         <span>
-          <small>Media inquires for Uniswap Labs - Contact media@uniswap.org</small>
+          <small>
+            Media inquires for Uniswap Labs - Contact <a href="mailto:media@uniswap.org">media@uniswap.org</a>
+          </small>
         </span>
         <IconRow>
           <Icon href="https://discord.com/invite/FCfyBSbCU5">
