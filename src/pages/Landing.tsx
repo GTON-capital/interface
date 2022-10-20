@@ -2,7 +2,7 @@ import { useWeb3React } from '@web3-react/core'
 import { ButtonPrimary, ButtonSecondary } from 'components/Button'
 import { AutoRow } from 'components/Row'
 import React, { useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useLandingIsOpen, useToggleLanding } from 'state/application/hooks'
 import { useIsDarkMode } from 'state/user/hooks'
 import styled from 'styled-components/macro'
@@ -59,8 +59,13 @@ export default function Landing() {
     }
   }, [account, toggleLanding])
 
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+
+  const show = pathname === '/' && open
+
   return (
-    <PageWrapper isDarkMode={isDarkMode} visible={open}>
+    <PageWrapper isDarkMode={isDarkMode} visible={show}>
       <ContentWrapper>
         <TitleText>Trade crypto and NFTs confidently</TitleText>
         <SubText>Swap tokens with the deepest liquidity and buy NFTs at the best prices.</SubText>
@@ -68,7 +73,14 @@ export default function Landing() {
       <ContentWrapper>
         <AutoRow gap="12px">
           <ButtonPrimary $borderRadius="12px" padding="1rem" width="content">
-            <ButtonText onClick={() => toggleLanding()}>Get started</ButtonText>
+            <ButtonText
+              onClick={() => {
+                toggleLanding()
+                navigate('/swap')
+              }}
+            >
+              Get started
+            </ButtonText>
           </ButtonPrimary>
           <NavLink to={'/about'}>
             <ButtonSecondary onClick={() => toggleLanding()} padding="1rem" width="content">

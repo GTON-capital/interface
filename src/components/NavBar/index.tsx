@@ -7,7 +7,7 @@ import { Box } from 'nft/components/Box'
 import { Row } from 'nft/components/Flex'
 import { UniIcon } from 'nft/components/icons'
 import { ReactNode } from 'react'
-import { NavLink, NavLinkProps, useLocation } from 'react-router-dom'
+import { NavLink, NavLinkProps, useLocation, useNavigate } from 'react-router-dom'
 import { useToggleLanding } from 'state/application/hooks'
 
 import { ChainSelector } from './ChainSelector'
@@ -78,14 +78,23 @@ const Navbar = () => {
 
   // const open = useLandingIsOpen()
   const toggleLanding = useToggleLanding(true)
+  const navigate = useNavigate()
 
   return (
     <>
       <nav className={styles.nav}>
         <Box display="flex" height="full" flexWrap="nowrap" alignItems="stretch">
           <Box className={styles.leftSideContainer}>
-            <Box as="a" href="#/swap" className={styles.logoContainer} onClick={() => toggleLanding()}>
-              <UniIcon width="48" height="48" className={styles.logo} />
+            <Box className={styles.logoContainer}>
+              <UniIcon
+                width="48"
+                height="48"
+                className={styles.logo}
+                onClick={() => {
+                  toggleLanding()
+                  navigate('/')
+                }}
+              />
             </Box>
             <Box display={{ sm: 'flex', lg: 'none' }}>
               <ChainSelector leftAlign={true} />

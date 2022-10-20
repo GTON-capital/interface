@@ -536,7 +536,15 @@ export default function Swap() {
           />
         )}
         <PageWrapper redesignFlag={redesignFlagEnabled} navBarFlag={navBarFlagEnabled}>
-          <SwapWrapper onClick={() => toggleLanding()} open={open} id="swap-page" redesignFlag={redesignFlagEnabled}>
+          <SwapWrapper
+            onClick={() => {
+              navigate('/swap')
+              toggleLanding()
+            }}
+            open={open}
+            id="swap-page"
+            redesignFlag={redesignFlagEnabled}
+          >
             <SwapHeader allowedSlippage={allowedSlippage} />
             <ConfirmSwapModal
               isOpen={showConfirm}

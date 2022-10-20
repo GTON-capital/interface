@@ -9,7 +9,7 @@ import { NftVariant, useNftFlag } from 'featureFlags/flags/nft'
 import { RedesignVariant, useRedesignFlag } from 'featureFlags/flags/redesign'
 import ApeModeQueryParamReader from 'hooks/useApeModeQueryParamReader'
 import { lazy, Suspense, useEffect } from 'react'
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { useIsDarkMode } from 'state/user/hooks'
 import styled from 'styled-components/macro'
 import { SpinnerSVG } from 'theme/components'
@@ -121,6 +121,7 @@ export default function App() {
   const redesignFlagEnabled = useRedesignFlag() === RedesignVariant.Enabled
 
   const { pathname } = useLocation()
+  const navigate = useNavigate()
   const currentPage = getCurrentPageFromLocation(pathname)
   const isDarkMode = useIsDarkMode()
   const isExpertMode = useIsExpertMode()
@@ -167,6 +168,7 @@ export default function App() {
             <Suspense fallback={<Loader />}>
               {isLoaded ? (
                 <Routes>
+                  <Route path="/" element={<Swap />} />
                   <Route path="tokens" element={<Tokens />}>
                     <Route path=":chainName" />
                   </Route>
