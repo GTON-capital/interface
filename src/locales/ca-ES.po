@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: uniswap-interface\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-11 02:57\n"
+"PO-Revision-Date: 2022-10-19 17:20\n"
 "Last-Translator: \n"
 "Language: ca_ES\n"
 "Language-Team: Catalan\n"
@@ -28,10 +28,6 @@ msgstr "$-"
 msgid "${0}"
 msgstr "${0}"
 
-#: src/components/swap/TradePrice.tsx
-msgid "(${0})"
-msgstr "(${0})"
-
 #: src/components/AddressInputPanel/index.tsx
 msgid "(View on Explorer)"
 msgstr "(Veure a Explorer)"
@@ -43,6 +39,10 @@ msgstr "(esborra-ho tot)"
 #: src/pages/Vote/Landing.tsx
 msgid "(edit)"
 msgstr "(edita)"
+
+#: src/components/swap/TradePrice.tsx
+msgid "({0})"
+msgstr "({0})"
 
 #: src/pages/Swap/index.tsx
 msgid "- Remove recipient"
@@ -283,14 +283,6 @@ msgstr "Aprovant"
 msgid "Approving {0}"
 msgstr "S’aprova {0}"
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Arbiscan"
-msgstr "Arbiscà"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Arbitrum Bridge"
-msgstr "Pont Arbitrum"
-
 #: src/components/DowntimeWarning/index.tsx
 msgid "Arbitrum is in Beta and may experience downtime. During downtime, your position will not earn fees and you will be unable to remove liquidity. <0>Read more.</0>"
 msgstr "L’àrbitre és en versió beta i pot experimentar temps d’inactivitat. Durant el temps d'inactivitat, la vostra posició no generarà comissions i no podreu eliminar la liquiditat. <0> Llegiu-ne més.</0>"
@@ -353,18 +345,6 @@ msgstr "La ruta al millor preu costa ~{formattedGasPriceString} en gasolina."
 msgid "Blocked Address"
 msgstr "Adreça bloquejada"
 
-#: src/components/Blocklist/index.tsx
-msgid "Blocked address"
-msgstr "Adreça bloquejada"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Blockscout"
-msgstr "Blockscout"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Bridge"
-msgstr "Pont"
-
 #: src/components/PositionCard/index.tsx
 msgid "By adding liquidity you'll earn 0.3% of all trades on this pair proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity."
 msgstr "Si afegiu liquiditat, guanyareu el 0,3% de totes les operacions d’aquest parell proporcional a la vostra quota de grup. Les comissions s’afegeixen al grup, s’acumulen en temps real i es poden reclamar retirant la vostra liquiditat."
@@ -393,11 +373,7 @@ msgstr "Precaució"
 msgid "Change"
 msgstr "Canvi"
 
-#: src/components/Header/index.tsx
-msgid "Charts"
-msgstr "Gràfics"
-
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "Check network status"
 msgstr "Comproveu l'estat de la xarxa"
 
@@ -417,7 +393,6 @@ msgstr "Reclamació"
 msgid "Claim <0/> for {0}"
 msgstr "Reclameu <0 /> per {0}"
 
-#: src/components/Header/index.tsx
 #: src/components/Menu/index.tsx
 #: src/components/claim/AddressClaimModal.tsx
 #: src/components/claim/ClaimModal.tsx
@@ -460,10 +435,6 @@ msgstr "Reclamat!"
 #: src/components/claim/ClaimModal.tsx
 msgid "Claiming"
 msgstr "Reclamant"
-
-#: src/components/Header/index.tsx
-msgid "Claiming UNI"
-msgstr "Reclamant UNI"
 
 #: src/components/earn/ClaimRewardModal.tsx
 #: src/components/earn/UnstakingModal.tsx
@@ -562,7 +533,6 @@ msgstr "Confirmeu la transacció a la cartera"
 msgid "Connect"
 msgstr "Connecta't"
 
-#: src/components/Web3Status/index.tsx
 #: src/components/earn/ClaimRewardModal.tsx
 #: src/pages/AddLiquidity/index.tsx
 #: src/pages/AddLiquidityV2/index.tsx
@@ -861,10 +831,6 @@ msgstr "L'estimació pot variar a causa de la configuració de gas de la cartera
 msgid "Estimated network fee"
 msgstr "Tarifa estimada de la xarxa"
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Etherscan"
-msgstr "Etherscan"
-
 #: src/components/vote/ExecuteModal.tsx
 #: src/pages/Vote/VotePage.tsx
 msgid "Execute"
@@ -926,10 +892,6 @@ msgstr "Exploreu Uniswap Analytics."
 msgid "Failed to switch networks from the Uniswap Interface. In order to use Uniswap on {0}, you must change the network in your wallet."
 msgstr "No s'ha pogut canviar de xarxa des de la interfície Uniswap. Per utilitzar Uniswap a {0}, heu de canviar la xarxa de la vostra cartera."
 
-#: src/components/Tokens/TokenTable/FavoriteButton.tsx
-msgid "Favorites"
-msgstr "Preferits"
-
 #: src/components/NavBar/MenuDropdown.tsx
 msgid "Feature Flags"
 msgstr "Característiques Banderes"
@@ -978,7 +940,6 @@ msgstr "Les posicions de rang complet poden guanyar menys comissions que les pos
 msgid "Get support on Discord"
 msgstr "Obteniu assistència a Discord"
 
-#: src/components/Header/NetworkSelector.tsx
 #: src/components/Menu/index.tsx
 msgid "Help Center"
 msgstr "Centre d'ajuda"
@@ -1186,10 +1147,6 @@ msgstr "Gestiona"
 msgid "Manage Liquidity in Rewards Pool"
 msgstr "Gestioneu la liquiditat al grup de recompenses"
 
-#: src/components/SearchModal/CurrencySearch.tsx
-msgid "Manage Token Lists"
-msgstr "Gestiona les llistes de fitxes"
-
 #: src/pages/PoolFinder/index.tsx
 msgid "Manage this pool."
 msgstr "Gestioneu aquest fons."
@@ -1295,7 +1252,7 @@ msgstr "No s'ha trobat el nom"
 msgid "Network Fee"
 msgstr "Tarifa de xarxa"
 
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "Network Warning"
 msgstr "Advertiment de xarxa"
 
@@ -1376,17 +1333,9 @@ msgstr "Quan estigueu satisfet amb la tarifa, feu clic a Subministrament per rev
 msgid "Only UNI votes that were self delegated or delegated to another address before block {0} are eligible for voting."
 msgstr "Només es poden votar els vots UNI que s’autodelegaven o delegaven a una altra direcció abans del bloc {0}."
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Optimism Bridge"
-msgstr "Pont de l'optimisme"
-
 #: src/components/DowntimeWarning/index.tsx
 msgid "Optimism is in Beta and may experience downtime. Optimism expects planned downtime to upgrade the network in the near future. During downtime, your position will not earn fees and you will be unable to remove liquidity. <0>Read more.</0>"
 msgstr "L'optimisme està en versió beta i pot experimentar temps d'inactivitat. L'optimisme espera un temps d'inactivitat previst per actualitzar la xarxa en un futur proper. Durant el temps d'inactivitat, la vostra posició no guanyarà comissions i no podreu eliminar liquiditat. <0>Llegeix més.</0>"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Optimistic Etherscan"
-msgstr "Etherscan optimista"
 
 #: src/components/Badge/RangeBadge.tsx
 msgid "Out of range"
@@ -1434,16 +1383,7 @@ msgstr "Si us plau, fes la teva pròpia investigació abans de negociar."
 msgid "Please type the word \"{confirmWord}\" to enable expert mode."
 msgstr "Escriviu la paraula \"{confirmWord}\" per habilitar el mode expert."
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Polygon Bridge"
-msgstr "Pont del polígon"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Polygonscan"
-msgstr "Polygonscan"
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
-#: src/components/Header/index.tsx
 #: src/components/NavBar/index.tsx
 msgid "Pool"
 msgstr "Grup"
@@ -1488,10 +1428,6 @@ msgstr "Col·leccions populars de NFT"
 #: src/components/NavBar/SearchBarDropdown.tsx
 msgid "Popular tokens"
 msgstr "Fitxes populars"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Portal Bridge"
-msgstr "Pont del Portal"
 
 #: src/pages/AddLiquidity/index.tsx
 msgid "Preview"
@@ -1704,10 +1640,6 @@ msgstr "Seleccioneu una fitxa"
 msgid "Select a token to find your v2 liquidity."
 msgstr "Seleccioneu una fitxa per trobar la vostra liquiditat v2."
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Select a {0}network"
-msgstr "Seleccioneu una xarxa {0}"
-
 #: src/pages/CreateProposal/ProposalActionSelector.tsx
 msgid "Select an action"
 msgstr "Seleccioneu una acció"
@@ -1821,7 +1753,6 @@ msgid "Supplying {0} {1} and {2} {3}"
 msgstr "Subministrant {0} {1} i {2} {3}"
 
 #: src/components/AccountDetailsV2/TransactionBody.tsx
-#: src/components/Header/index.tsx
 #: src/components/NavBar/index.tsx
 #: src/components/Tokens/TokenDetails/MobileBalanceSummaryFooter.tsx
 #: src/components/swap/SwapHeader.tsx
@@ -1922,7 +1853,7 @@ msgstr "L'intent de connexió ha fallat. Feu clic a prova de nou i seguiu els pa
 msgid "The cost of sending this transaction is more than half of the value of the input amount."
 msgstr "El cost d'enviar aquesta transacció és més de la meitat del valor de l'import d'entrada."
 
-#: src/components/Header/Polling.tsx
+#: src/components/Polling/index.tsx
 msgid "The current fast gas amount for sending a transaction on L1. Gas fees are paid in Ethereum's native currency Ether (ETH) and denominated in GWEI."
 msgstr "La quantitat actual de gas ràpid per enviar una transacció a L1. Les tarifes del gas es paguen en la moneda nativa d'Ethereum, Ether (ETH) i estan denominades en GWEI."
 
@@ -1951,7 +1882,7 @@ msgstr "El preu de mercat està fora de l’interval de preus especificat. Nomé
 msgid "The minimum amount you are guaranteed to receive. If the price slips any further, your transaction will revert."
 msgstr "La quantitat mínima que es garanteix rebre. Si el preu baixa més, la transacció es revertirà."
 
-#: src/components/Header/Polling.tsx
+#: src/components/Polling/index.tsx
 msgid "The most recent block number on this network. Prices update on every block."
 msgstr "El número de bloc més recent d'aquesta xarxa. Actualització de preus a cada bloc."
 
@@ -2042,14 +1973,13 @@ msgid "To (at least)"
 msgstr "A (com a mínim)"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Token Name"
+msgid "Token name"
 msgstr "Nom del testimoni"
 
 #: src/components/SearchModal/BlockedToken.tsx
 msgid "Token not supported"
 msgstr "El testimoni no és compatible"
 
-#: src/components/Header/index.tsx
 #: src/components/NavBar/SearchBarDropdown.tsx
 #: src/components/NavBar/index.tsx
 #: src/components/SearchModal/Manage.tsx
@@ -2060,7 +1990,6 @@ msgstr "Fitxes"
 msgid "Top pools"
 msgstr "Grups principals"
 
-#: src/pages/Tokens/index.tsx
 #: src/pages/Tokens/index.tsx
 msgid "Top tokens on Uniswap"
 msgstr "Les fitxes principals d'Uniswap"
@@ -2317,10 +2246,6 @@ msgstr "Veure la transacció a Explorer"
 msgid "Volume is the amount of the asset that has been traded on Uniswap v3 during the selected time frame."
 msgstr "El volum és la quantitat de l'actiu que s'ha negociat a Uniswap v3 durant el període de temps seleccionat."
 
-#: src/components/Header/index.tsx
-msgid "Vote"
-msgstr "Vota"
-
 #: src/pages/Vote/VotePage.tsx
 msgid "Vote Against"
 msgstr "Vota en contra"
@@ -2494,11 +2419,7 @@ msgstr "No teniu prou vots per enviar una proposta"
 msgid "You don’t have liquidity in this pool yet."
 msgstr "Encara no teniu liquiditat en aquest grup."
 
-#: src/components/Tokens/TokenTable/TokenTable.tsx
-msgid "You have no favorited tokens"
-msgstr "No tens fitxes preferides"
-
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "You may have lost your network connection."
 msgstr "És possible que hàgiu perdut la connexió de xarxa."
 
@@ -2670,15 +2591,11 @@ msgstr "per"
 msgid "for {0}"
 msgstr "per a {0}"
 
-#: src/components/Header/Polling.tsx
+#: src/components/Polling/index.tsx
 msgid "gwei"
 msgstr "gwei"
 
-#: src/components/Web3Status/index.tsx
-msgid "has socks emoji"
-msgstr "té emoji de mitjons"
-
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "here."
 msgstr "aquí."
 
@@ -2806,10 +2723,6 @@ msgstr "{0} fitxes"
 msgid "{0} {1} Price:"
 msgstr "{0} {1} Preu:"
 
-#: src/components/Header/index.tsx
-msgid "{0} {nativeCurrencySymbol}"
-msgstr "{0} {nativeCurrencySymbol}"
-
 #: src/components/SearchModal/CurrencyList/index.tsx
 msgid "{0} • Added by user"
 msgstr "{0} • Afegit per l'usuari"
@@ -2862,7 +2775,7 @@ msgstr "{USER_AMOUNT} UNI"
 msgid "{activeTokensOnThisChain} tokens"
 msgstr "{activeTokensOnThisChain} fitxes"
 
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "{label} might be down right now, or you may have lost your network connection."
 msgstr "És possible que {label} estigui inactiva en aquest moment o que hagis perdut la connexió a la xarxa."
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: uniswap-interface\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-11 02:57\n"
+"PO-Revision-Date: 2022-10-19 17:20\n"
 "Last-Translator: \n"
 "Language: id_ID\n"
 "Language-Team: Indonesian\n"
@@ -28,10 +28,6 @@ msgstr "$-"
 msgid "${0}"
 msgstr "${0}"
 
-#: src/components/swap/TradePrice.tsx
-msgid "(${0})"
-msgstr "(${0})"
-
 #: src/components/AddressInputPanel/index.tsx
 msgid "(View on Explorer)"
 msgstr "(Lihat di Penjelajah)"
@@ -43,6 +39,10 @@ msgstr "(Hapus semua)"
 #: src/pages/Vote/Landing.tsx
 msgid "(edit)"
 msgstr "(edit)"
+
+#: src/components/swap/TradePrice.tsx
+msgid "({0})"
+msgstr "({0})"
 
 #: src/pages/Swap/index.tsx
 msgid "- Remove recipient"
@@ -283,14 +283,6 @@ msgstr "Menyetujui"
 msgid "Approving {0}"
 msgstr "Menyetujui {0}"
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Arbiscan"
-msgstr "Arbiskan"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Arbitrum Bridge"
-msgstr "Jembatan Arbitrum"
-
 #: src/components/DowntimeWarning/index.tsx
 msgid "Arbitrum is in Beta and may experience downtime. During downtime, your position will not earn fees and you will be unable to remove liquidity. <0>Read more.</0>"
 msgstr "Arbitrum dalam Beta dan mungkin mengalami downtime. Selama waktu henti, posisi Anda tidak akan mendapatkan biaya dan Anda tidak akan dapat menghapus likuiditas. <0>Baca selengkapnya.</0>"
@@ -353,18 +345,6 @@ msgstr "Biaya rute harga terbaik ~{formattedGasPriceString} dalam gas."
 msgid "Blocked Address"
 msgstr "Alamat yang Diblokir"
 
-#: src/components/Blocklist/index.tsx
-msgid "Blocked address"
-msgstr "Alamat diblokir"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Blockscout"
-msgstr "Blockscout"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Bridge"
-msgstr "Menjembatani"
-
 #: src/components/PositionCard/index.tsx
 msgid "By adding liquidity you'll earn 0.3% of all trades on this pair proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity."
 msgstr "Dengan menambahkan likuiditas, Anda akan mendapatkan 0,3% dari semua perdagangan pada pasangan ini sebanding dengan bagian pool Anda. Biaya ditambahkan ke pool, bertambah secara real time dan dapat diklaim dengan menarik likuiditas Anda."
@@ -393,11 +373,7 @@ msgstr "Peringatan"
 msgid "Change"
 msgstr "Perubahan"
 
-#: src/components/Header/index.tsx
-msgid "Charts"
-msgstr "Grafik"
-
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "Check network status"
 msgstr "Periksa status jaringan"
 
@@ -417,7 +393,6 @@ msgstr "Klaim"
 msgid "Claim <0/> for {0}"
 msgstr "Klaim <0/> untuk {0}"
 
-#: src/components/Header/index.tsx
 #: src/components/Menu/index.tsx
 #: src/components/claim/AddressClaimModal.tsx
 #: src/components/claim/ClaimModal.tsx
@@ -460,10 +435,6 @@ msgstr "Diklaim!"
 #: src/components/claim/ClaimModal.tsx
 msgid "Claiming"
 msgstr "Mengklaim"
-
-#: src/components/Header/index.tsx
-msgid "Claiming UNI"
-msgstr "Mengklaim UNI"
 
 #: src/components/earn/ClaimRewardModal.tsx
 #: src/components/earn/UnstakingModal.tsx
@@ -562,7 +533,6 @@ msgstr "Konfirmasi transaksi di dompet"
 msgid "Connect"
 msgstr "Menghubung"
 
-#: src/components/Web3Status/index.tsx
 #: src/components/earn/ClaimRewardModal.tsx
 #: src/pages/AddLiquidity/index.tsx
 #: src/pages/AddLiquidityV2/index.tsx
@@ -861,10 +831,6 @@ msgstr "Estimasi mungkin berbeda karena pengaturan gas dompet Anda"
 msgid "Estimated network fee"
 msgstr "Perkiraan biaya jaringan"
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Etherscan"
-msgstr "Etherscan"
-
 #: src/components/vote/ExecuteModal.tsx
 #: src/pages/Vote/VotePage.tsx
 msgid "Execute"
@@ -926,10 +892,6 @@ msgstr "Jelajahi Uniswap Analytics."
 msgid "Failed to switch networks from the Uniswap Interface. In order to use Uniswap on {0}, you must change the network in your wallet."
 msgstr "Gagal berpindah jaringan dari Antarmuka Uniswap. Untuk menggunakan Uniswap pada {0}, Anda harus mengubah jaringan di dompet Anda."
 
-#: src/components/Tokens/TokenTable/FavoriteButton.tsx
-msgid "Favorites"
-msgstr "Favorit"
-
 #: src/components/NavBar/MenuDropdown.tsx
 msgid "Feature Flags"
 msgstr "Fitur Bendera"
@@ -978,7 +940,6 @@ msgstr "Posisi rentang penuh dapat memperoleh biaya lebih sedikit daripada posis
 msgid "Get support on Discord"
 msgstr "Dapatkan dukungan di Discord"
 
-#: src/components/Header/NetworkSelector.tsx
 #: src/components/Menu/index.tsx
 msgid "Help Center"
 msgstr "Pusat Bantuan"
@@ -1186,10 +1147,6 @@ msgstr "Mengelola"
 msgid "Manage Liquidity in Rewards Pool"
 msgstr "Kelola Likuiditas di Pool Hadiah"
 
-#: src/components/SearchModal/CurrencySearch.tsx
-msgid "Manage Token Lists"
-msgstr "Kelola Daftar Token"
-
 #: src/pages/PoolFinder/index.tsx
 msgid "Manage this pool."
 msgstr "Kelola pangkalan ini."
@@ -1295,7 +1252,7 @@ msgstr "Nama tidak ditemukan"
 msgid "Network Fee"
 msgstr "Biaya Jaringan"
 
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "Network Warning"
 msgstr "Peringatan Jaringan"
 
@@ -1376,17 +1333,9 @@ msgstr "Setelah Anda puas dengan penawaran harga klik untuk meninjau."
 msgid "Only UNI votes that were self delegated or delegated to another address before block {0} are eligible for voting."
 msgstr "Hanya suara UNI yang didelegasikan sendiri atau didelegasikan ke alamat lain sebelum blok {0} yang memenuhi syarat untuk memberi suara."
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Optimism Bridge"
-msgstr "Jembatan Optimisme"
-
 #: src/components/DowntimeWarning/index.tsx
 msgid "Optimism is in Beta and may experience downtime. Optimism expects planned downtime to upgrade the network in the near future. During downtime, your position will not earn fees and you will be unable to remove liquidity. <0>Read more.</0>"
 msgstr "Optimisme dalam Beta dan mungkin mengalami downtime. Optimisme mengharapkan downtime yang direncanakan untuk meningkatkan jaringan dalam waktu dekat. Selama waktu henti, posisi Anda tidak akan mendapatkan biaya dan Anda tidak akan dapat menghapus likuiditas. <0>Baca lebih lanjut.</0>"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Optimistic Etherscan"
-msgstr "Optimis Etherscan"
 
 #: src/components/Badge/RangeBadge.tsx
 msgid "Out of range"
@@ -1434,16 +1383,7 @@ msgstr "Silakan lakukan riset Anda sendiri sebelum berdagang."
 msgid "Please type the word \"{confirmWord}\" to enable expert mode."
 msgstr "Ketik kata \"{confirmWord}\" untuk mengaktifkan mode ahli."
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Polygon Bridge"
-msgstr "Jembatan Poligon"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Polygonscan"
-msgstr "Polygonscan"
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
-#: src/components/Header/index.tsx
 #: src/components/NavBar/index.tsx
 msgid "Pool"
 msgstr "Kolam"
@@ -1488,10 +1428,6 @@ msgstr "Koleksi NFT populer"
 #: src/components/NavBar/SearchBarDropdown.tsx
 msgid "Popular tokens"
 msgstr "Token populer"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Portal Bridge"
-msgstr "Jembatan Portal"
 
 #: src/pages/AddLiquidity/index.tsx
 msgid "Preview"
@@ -1704,10 +1640,6 @@ msgstr "Pilih token"
 msgid "Select a token to find your v2 liquidity."
 msgstr "Pilih token untuk menemukan likuiditas v2 Anda."
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Select a {0}network"
-msgstr "Pilih jaringan {0}"
-
 #: src/pages/CreateProposal/ProposalActionSelector.tsx
 msgid "Select an action"
 msgstr "Pilih tindakan"
@@ -1821,7 +1753,6 @@ msgid "Supplying {0} {1} and {2} {3}"
 msgstr "Memasok {0} {1} dan {2} {3}"
 
 #: src/components/AccountDetailsV2/TransactionBody.tsx
-#: src/components/Header/index.tsx
 #: src/components/NavBar/index.tsx
 #: src/components/Tokens/TokenDetails/MobileBalanceSummaryFooter.tsx
 #: src/components/swap/SwapHeader.tsx
@@ -1922,7 +1853,7 @@ msgstr "Upaya koneksi gagal. Silakan klik coba lagi dan ikuti langkah-langkah un
 msgid "The cost of sending this transaction is more than half of the value of the input amount."
 msgstr "Biaya pengiriman transaksi ini lebih dari setengah dari nilai jumlah input."
 
-#: src/components/Header/Polling.tsx
+#: src/components/Polling/index.tsx
 msgid "The current fast gas amount for sending a transaction on L1. Gas fees are paid in Ethereum's native currency Ether (ETH) and denominated in GWEI."
 msgstr "Jumlah gas cepat saat ini untuk mengirim transaksi di L1. Biaya gas dibayarkan dalam mata uang asli Ethereum, Ether (ETH) dan dalam mata uang GWEI."
 
@@ -1951,7 +1882,7 @@ msgstr "Harga pasar di luar rentang harga yang Anda tentukan. Khusus setoran ase
 msgid "The minimum amount you are guaranteed to receive. If the price slips any further, your transaction will revert."
 msgstr "Jumlah minimum yang dijamin akan Anda terima. Jika harga tergelincir lebih jauh, transaksi Anda akan kembali."
 
-#: src/components/Header/Polling.tsx
+#: src/components/Polling/index.tsx
 msgid "The most recent block number on this network. Prices update on every block."
 msgstr "Nomor blokir terbaru di jaringan ini. Harga update di setiap blok."
 
@@ -2042,14 +1973,13 @@ msgid "To (at least)"
 msgstr "Untuk (setidaknya)"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Token Name"
-msgstr "Nama Token"
+msgid "Token name"
+msgstr "Nama token"
 
 #: src/components/SearchModal/BlockedToken.tsx
 msgid "Token not supported"
 msgstr "Token tidak didukung"
 
-#: src/components/Header/index.tsx
 #: src/components/NavBar/SearchBarDropdown.tsx
 #: src/components/NavBar/index.tsx
 #: src/components/SearchModal/Manage.tsx
@@ -2060,7 +1990,6 @@ msgstr "Token"
 msgid "Top pools"
 msgstr "Kolam atas"
 
-#: src/pages/Tokens/index.tsx
 #: src/pages/Tokens/index.tsx
 msgid "Top tokens on Uniswap"
 msgstr "Token teratas di Uniswap"
@@ -2317,10 +2246,6 @@ msgstr "Lihat transaksi di Explorer"
 msgid "Volume is the amount of the asset that has been traded on Uniswap v3 during the selected time frame."
 msgstr "Volume adalah jumlah aset yang telah diperdagangkan di Uniswap v3 selama jangka waktu yang dipilih."
 
-#: src/components/Header/index.tsx
-msgid "Vote"
-msgstr "Beri Suara"
-
 #: src/pages/Vote/VotePage.tsx
 msgid "Vote Against"
 msgstr "Beri Suara Melawan"
@@ -2494,11 +2419,7 @@ msgstr "Anda tidak memiliki cukup suara untuk mengirimkan proposal"
 msgid "You don’t have liquidity in this pool yet."
 msgstr "Anda belum memiliki likuiditas di pool ini."
 
-#: src/components/Tokens/TokenTable/TokenTable.tsx
-msgid "You have no favorited tokens"
-msgstr "Anda tidak memiliki token favorit"
-
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "You may have lost your network connection."
 msgstr "Anda mungkin kehilangan koneksi jaringan."
 
@@ -2670,15 +2591,11 @@ msgstr "untuk"
 msgid "for {0}"
 msgstr "untuk {0}"
 
-#: src/components/Header/Polling.tsx
+#: src/components/Polling/index.tsx
 msgid "gwei"
 msgstr "gwei"
 
-#: src/components/Web3Status/index.tsx
-msgid "has socks emoji"
-msgstr "memiliki emoji kaus kaki"
-
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "here."
 msgstr "di sini."
 
@@ -2806,10 +2723,6 @@ msgstr "{0} token"
 msgid "{0} {1} Price:"
 msgstr "{0} {1} Harga:"
 
-#: src/components/Header/index.tsx
-msgid "{0} {nativeCurrencySymbol}"
-msgstr "{0} {nativeCurrencySymbol}"
-
 #: src/components/SearchModal/CurrencyList/index.tsx
 msgid "{0} • Added by user"
 msgstr "{0} • Ditambahkan oleh pengguna"
@@ -2862,7 +2775,7 @@ msgstr "{USER_AMOUNT} UNI"
 msgid "{activeTokensOnThisChain} tokens"
 msgstr "{activeTokensOnThisChain} token"
 
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "{label} might be down right now, or you may have lost your network connection."
 msgstr "{label} mungkin sedang down sekarang, atau Anda mungkin kehilangan koneksi jaringan Anda."
 

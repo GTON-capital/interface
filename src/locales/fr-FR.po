@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: uniswap-interface\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2022-10-11 02:57\n"
+"PO-Revision-Date: 2022-10-19 17:20\n"
 "Last-Translator: \n"
 "Language: fr_FR\n"
 "Language-Team: French\n"
@@ -28,10 +28,6 @@ msgstr "$-"
 msgid "${0}"
 msgstr "${0}"
 
-#: src/components/swap/TradePrice.tsx
-msgid "(${0})"
-msgstr "(${0})"
-
 #: src/components/AddressInputPanel/index.tsx
 msgid "(View on Explorer)"
 msgstr "(Voir sur Explorer)"
@@ -43,6 +39,10 @@ msgstr "(tout effacer)"
 #: src/pages/Vote/Landing.tsx
 msgid "(edit)"
 msgstr "(modifier)"
+
+#: src/components/swap/TradePrice.tsx
+msgid "({0})"
+msgstr "({0})"
 
 #: src/pages/Swap/index.tsx
 msgid "- Remove recipient"
@@ -283,14 +283,6 @@ msgstr "Approbation"
 msgid "Approving {0}"
 msgstr "Approbation de {0}"
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Arbiscan"
-msgstr "Arbiscan"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Arbitrum Bridge"
-msgstr "Pont d'arbitrage"
-
 #: src/components/DowntimeWarning/index.tsx
 msgid "Arbitrum is in Beta and may experience downtime. During downtime, your position will not earn fees and you will be unable to remove liquidity. <0>Read more.</0>"
 msgstr "Arbitrum est en version bêta et peut connaître des temps d'arrêt. Pendant les temps d'arrêt, votre position ne rapportera pas de frais et vous ne pourrez pas retirer de liquidité. <0>En savoir plus.</0>"
@@ -353,18 +345,6 @@ msgstr "L'itinéraire au meilleur prix coûte ~{formattedGasPriceString} en esse
 msgid "Blocked Address"
 msgstr "Adresse bloquée"
 
-#: src/components/Blocklist/index.tsx
-msgid "Blocked address"
-msgstr "Adresse bloquée"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Blockscout"
-msgstr "Éclaireur de blocs"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Bridge"
-msgstr "Pont"
-
 #: src/components/PositionCard/index.tsx
 msgid "By adding liquidity you'll earn 0.3% of all trades on this pair proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity."
 msgstr "En ajoutant de la liquidité, vous gagnerez 0,3 % de toutes les transactions sur cette paire proportionnellement à votre part du pool. Les frais sont ajoutés à la pool, accumulés en temps réel et peuvent être réclamés en retirant votre liquidité."
@@ -393,11 +373,7 @@ msgstr "Mise en garde"
 msgid "Change"
 msgstr "Changer"
 
-#: src/components/Header/index.tsx
-msgid "Charts"
-msgstr "Graphiques"
-
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "Check network status"
 msgstr "Vérifier l'état du réseau"
 
@@ -417,7 +393,6 @@ msgstr "Réclamer"
 msgid "Claim <0/> for {0}"
 msgstr "Réclamez <0/> pour {0}"
 
-#: src/components/Header/index.tsx
 #: src/components/Menu/index.tsx
 #: src/components/claim/AddressClaimModal.tsx
 #: src/components/claim/ClaimModal.tsx
@@ -460,10 +435,6 @@ msgstr "Revendiqué!"
 #: src/components/claim/ClaimModal.tsx
 msgid "Claiming"
 msgstr "Réclamation"
-
-#: src/components/Header/index.tsx
-msgid "Claiming UNI"
-msgstr "Réclamer UNI"
 
 #: src/components/earn/ClaimRewardModal.tsx
 #: src/components/earn/UnstakingModal.tsx
@@ -562,7 +533,6 @@ msgstr "Confirmer la transaction dans le portefeuille"
 msgid "Connect"
 msgstr "Relier"
 
-#: src/components/Web3Status/index.tsx
 #: src/components/earn/ClaimRewardModal.tsx
 #: src/pages/AddLiquidity/index.tsx
 #: src/pages/AddLiquidityV2/index.tsx
@@ -861,10 +831,6 @@ msgstr "L'estimation peut différer en raison des paramètres de gaz de votre po
 msgid "Estimated network fee"
 msgstr "Frais de réseau estimés"
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Etherscan"
-msgstr "Etherscan"
-
 #: src/components/vote/ExecuteModal.tsx
 #: src/pages/Vote/VotePage.tsx
 msgid "Execute"
@@ -926,10 +892,6 @@ msgstr "Explorez Uniswap Analytics."
 msgid "Failed to switch networks from the Uniswap Interface. In order to use Uniswap on {0}, you must change the network in your wallet."
 msgstr "Échec du changement de réseau depuis l'interface Uniswap. Pour utiliser Uniswap sur {0}, vous devez changer de réseau dans votre portefeuille."
 
-#: src/components/Tokens/TokenTable/FavoriteButton.tsx
-msgid "Favorites"
-msgstr "Favoris"
-
 #: src/components/NavBar/MenuDropdown.tsx
 msgid "Feature Flags"
 msgstr "Indicateurs de fonctionnalité"
@@ -978,7 +940,6 @@ msgstr "Les positions de gamme complète peuvent rapporter moins de frais que le
 msgid "Get support on Discord"
 msgstr "Obtenez de l'aide sur Discord"
 
-#: src/components/Header/NetworkSelector.tsx
 #: src/components/Menu/index.tsx
 msgid "Help Center"
 msgstr "Centre d'aide"
@@ -1186,10 +1147,6 @@ msgstr "Gérer"
 msgid "Manage Liquidity in Rewards Pool"
 msgstr "Gérer la liquidité dans le pool de récompenses"
 
-#: src/components/SearchModal/CurrencySearch.tsx
-msgid "Manage Token Lists"
-msgstr "Gérer les listes de jetons"
-
 #: src/pages/PoolFinder/index.tsx
 msgid "Manage this pool."
 msgstr "Gérer ce pool."
@@ -1295,7 +1252,7 @@ msgstr "Nom introuvable"
 msgid "Network Fee"
 msgstr "Frais de réseau"
 
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "Network Warning"
 msgstr "Avertissement réseau"
 
@@ -1376,17 +1333,9 @@ msgstr "Une fois que vous êtes satisfait du taux cliquez sur fournir pour véri
 msgid "Only UNI votes that were self delegated or delegated to another address before block {0} are eligible for voting."
 msgstr "Seuls les votes UNI qui ont été auto-délégués ou délégués à une autre adresse avant le bloc {0} sont éligibles pour voter."
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Optimism Bridge"
-msgstr "Pont de l'optimisme"
-
 #: src/components/DowntimeWarning/index.tsx
 msgid "Optimism is in Beta and may experience downtime. Optimism expects planned downtime to upgrade the network in the near future. During downtime, your position will not earn fees and you will be unable to remove liquidity. <0>Read more.</0>"
 msgstr "L'optimisme est en version bêta et peut connaître des temps d'arrêt. Optimism s'attend à ce que les temps d'arrêt prévus pour mettre à niveau le réseau dans un proche avenir. Pendant les temps d'arrêt, votre position ne rapportera pas de frais et vous ne pourrez pas retirer de liquidité. <0>Lire la suite.</0>"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Optimistic Etherscan"
-msgstr "Etherscan optimiste"
 
 #: src/components/Badge/RangeBadge.tsx
 msgid "Out of range"
@@ -1434,16 +1383,7 @@ msgstr "Veuillez faire vos propres recherches avant de négocier."
 msgid "Please type the word \"{confirmWord}\" to enable expert mode."
 msgstr "Veuillez taper le mot \"{confirmWord}\" pour activer le mode expert."
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Polygon Bridge"
-msgstr "Pont Polygone"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Polygonscan"
-msgstr "Balayage polygonal"
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
-#: src/components/Header/index.tsx
 #: src/components/NavBar/index.tsx
 msgid "Pool"
 msgstr "Pool"
@@ -1488,10 +1428,6 @@ msgstr "Collections NFT populaires"
 #: src/components/NavBar/SearchBarDropdown.tsx
 msgid "Popular tokens"
 msgstr "Jetons populaires"
-
-#: src/components/Header/NetworkSelector.tsx
-msgid "Portal Bridge"
-msgstr "Pont portail"
 
 #: src/pages/AddLiquidity/index.tsx
 msgid "Preview"
@@ -1704,10 +1640,6 @@ msgstr "Sélectionnez un jeton"
 msgid "Select a token to find your v2 liquidity."
 msgstr "Sélectionnez un jeton pour trouver votre liquidité v2."
 
-#: src/components/Header/NetworkSelector.tsx
-msgid "Select a {0}network"
-msgstr "Sélectionnez un réseau {0}"
-
 #: src/pages/CreateProposal/ProposalActionSelector.tsx
 msgid "Select an action"
 msgstr "Sélectionnez une action"
@@ -1821,7 +1753,6 @@ msgid "Supplying {0} {1} and {2} {3}"
 msgstr "Approvisionnement {0} {1} et {2} {3}"
 
 #: src/components/AccountDetailsV2/TransactionBody.tsx
-#: src/components/Header/index.tsx
 #: src/components/NavBar/index.tsx
 #: src/components/Tokens/TokenDetails/MobileBalanceSummaryFooter.tsx
 #: src/components/swap/SwapHeader.tsx
@@ -1922,7 +1853,7 @@ msgstr "La tentative de connexion a échoué. Veuillez cliquer sur réessayer et
 msgid "The cost of sending this transaction is more than half of the value of the input amount."
 msgstr "Le coût d'envoi de cette transaction est supérieur à la moitié de la valeur du montant saisi."
 
-#: src/components/Header/Polling.tsx
+#: src/components/Polling/index.tsx
 msgid "The current fast gas amount for sending a transaction on L1. Gas fees are paid in Ethereum's native currency Ether (ETH) and denominated in GWEI."
 msgstr "La quantité de gaz rapide actuelle pour l'envoi d'une transaction sur L1. Les frais de gaz sont payés dans la devise native d'Ethereum Ether (ETH) et libellés en GWEI."
 
@@ -1951,7 +1882,7 @@ msgstr "Le prix du marché est en dehors de votre fourchette de prix spécifiée
 msgid "The minimum amount you are guaranteed to receive. If the price slips any further, your transaction will revert."
 msgstr "Le montant minimum que vous êtes assuré de recevoir. Si le prix glisse davantage, votre transaction sera annulée."
 
-#: src/components/Header/Polling.tsx
+#: src/components/Polling/index.tsx
 msgid "The most recent block number on this network. Prices update on every block."
 msgstr "Le numéro de bloc le plus récent sur ce réseau. Les prix sont mis à jour à chaque bloc."
 
@@ -2042,14 +1973,13 @@ msgid "To (at least)"
 msgstr "Vers (au moins)"
 
 #: src/components/Tokens/TokenTable/TokenRow.tsx
-msgid "Token Name"
+msgid "Token name"
 msgstr "Nom du jeton"
 
 #: src/components/SearchModal/BlockedToken.tsx
 msgid "Token not supported"
 msgstr "Jeton non pris en charge"
 
-#: src/components/Header/index.tsx
 #: src/components/NavBar/SearchBarDropdown.tsx
 #: src/components/NavBar/index.tsx
 #: src/components/SearchModal/Manage.tsx
@@ -2060,7 +1990,6 @@ msgstr "Jetons"
 msgid "Top pools"
 msgstr "Pools du haut"
 
-#: src/pages/Tokens/index.tsx
 #: src/pages/Tokens/index.tsx
 msgid "Top tokens on Uniswap"
 msgstr "Meilleurs jetons sur Uniswap"
@@ -2317,10 +2246,6 @@ msgstr "Voir la transaction sur Explorer"
 msgid "Volume is the amount of the asset that has been traded on Uniswap v3 during the selected time frame."
 msgstr "Le volume est le montant de l'actif qui a été échangé sur Uniswap v3 pendant la période sélectionnée."
 
-#: src/components/Header/index.tsx
-msgid "Vote"
-msgstr "Voter"
-
 #: src/pages/Vote/VotePage.tsx
 msgid "Vote Against"
 msgstr "Voter contre"
@@ -2494,11 +2419,7 @@ msgstr "Vous n'avez pas assez de votes pour soumettre une proposition"
 msgid "You don’t have liquidity in this pool yet."
 msgstr "Vous n'avez pas encore de liquidités dans ce pool."
 
-#: src/components/Tokens/TokenTable/TokenTable.tsx
-msgid "You have no favorited tokens"
-msgstr "Vous n'avez pas de jetons favoris"
-
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "You may have lost your network connection."
 msgstr "Vous avez peut-être perdu votre connexion réseau."
 
@@ -2670,15 +2591,11 @@ msgstr "pour"
 msgid "for {0}"
 msgstr "pour {0}"
 
-#: src/components/Header/Polling.tsx
+#: src/components/Polling/index.tsx
 msgid "gwei"
 msgstr "gwei"
 
-#: src/components/Web3Status/index.tsx
-msgid "has socks emoji"
-msgstr "a des chaussettes d'émoji"
-
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "here."
 msgstr "ici."
 
@@ -2806,10 +2723,6 @@ msgstr "{0} jetons"
 msgid "{0} {1} Price:"
 msgstr "Prix {0} {1} :"
 
-#: src/components/Header/index.tsx
-msgid "{0} {nativeCurrencySymbol}"
-msgstr "{0} {nativeCurrencySymbol}"
-
 #: src/components/SearchModal/CurrencyList/index.tsx
 msgid "{0} • Added by user"
 msgstr "{0} • Ajouté par l'utilisateur"
@@ -2862,7 +2775,7 @@ msgstr "{USER_AMOUNT} UNI"
 msgid "{activeTokensOnThisChain} tokens"
 msgstr "{activeTokensOnThisChain} jetons"
 
-#: src/components/Header/ChainConnectivityWarning.tsx
+#: src/components/Polling/ChainConnectivityWarning.tsx
 msgid "{label} might be down right now, or you may have lost your network connection."
 msgstr "{label} est peut-être en panne en ce moment ou vous avez peut-être perdu votre connexion réseau."
 
