@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
+export const ROUTER_ADDRESS = '0x385AE8e21BD41B7C9d85C924f350f4237A5380dd'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -16,6 +16,9 @@ export const USDT = new Token(ChainId.MAINNET, '0xdAC17F958D2ee523a2206206994597
 export const COMP = new Token(ChainId.MAINNET, '0xc00e94Cb662C3520282E6f5717214004A7f26888', 18, 'COMP', 'Compound')
 export const MKR = new Token(ChainId.MAINNET, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
 export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
+export const GTON = new Token(ChainId.GTON, '0x7c6b91d9be155a6db01f749217d76ff02a7227f2', 18, 'GTON', 'GTON')
+export const GMN = new Token(ChainId.GTON, '0x6dcfc3a9feef494018233b76cee03f15c7b9264b', 18, 'GMN', 'Gemeni')
+export const PPX = new Token(ChainId.GTON, '0x91e808EAb0164C4391F70E3B713cbF03B7fdC34e', 18, 'PPX', 'Poppix')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -29,7 +32,8 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR],
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON, GMN, PPX]
 }
 
 /**
@@ -45,13 +49,15 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON, GMN, PPX]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON, GMN, PPX]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
