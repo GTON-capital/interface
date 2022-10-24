@@ -19,6 +19,9 @@ export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A
 export const GTON = new Token(ChainId.GTON, '0x7c6b91d9be155a6db01f749217d76ff02a7227f2', 18, 'GTON', 'GTON')
 export const GMN = new Token(ChainId.GTON, '0x6dcfc3a9feef494018233b76cee03f15c7b9264b', 18, 'GMN', 'Gemeni')
 export const PPX = new Token(ChainId.GTON, '0x91e808EAb0164C4391F70E3B713cbF03B7fdC34e', 18, 'PPX', 'Poppix')
+export const RTX = new Token(ChainId.GTON, '0x125903322E8cDb419d7496D19E6cd08a8dc4AB17', 18, 'RTX', 'RTX')
+export const BS = new Token(ChainId.GTON, '0x610390D283790915BF2b79bbf1203f1A9d624138', 18, 'BS', 'BurgerSing')
+export const KFC = new Token(ChainId.GTON, '0x21a05C42eB33dDb2b5A363c0eB65449B67D3D430', 18, 'KFC', 'KFC')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -33,7 +36,7 @@ const WETH_ONLY: ChainTokenList = {
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR],
-  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON, GMN, PPX]
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON, GMN, PPX, RTX, BS, KFC]
 }
 
 /**

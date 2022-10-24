@@ -220,7 +220,6 @@ export function useMultipleContractSingleData(
   )
 
   const results = useCallsData(calls, options)
-
   const latestBlockNumber = useBlockNumber()
 
   return useMemo(() => {
