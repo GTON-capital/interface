@@ -14,7 +14,6 @@ export interface SerializedPair {
 }
 
 export const updateMatchesDarkMode = createAction<{ matchesDarkMode: boolean }>('user/updateMatchesDarkMode')
-export const updateUserDarkMode = createAction<{ userDarkMode: boolean }>('user/updateUserDarkMode')
 export const updateUserExpertMode = createAction<{ userExpertMode: boolean }>('user/updateUserExpertMode')
 export const updateUserSlippageTolerance = createAction<{ userSlippageTolerance: number }>(
   'user/updateUserSlippageTolerance'
