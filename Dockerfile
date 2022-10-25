@@ -15,4 +15,4 @@ RUN yarn build
 
 EXPOSE 8080
 
-CMD ["yarn", "start"]
+CMD ["npx", "serve", "-s", "build"]
