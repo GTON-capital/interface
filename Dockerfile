@@ -13,6 +13,6 @@ COPY . .
 
 RUN yarn build
 
-EXPOSE 8080
+EXPOSE 5000
 
 CMD ["npx", "serve", "-s", "build"]
