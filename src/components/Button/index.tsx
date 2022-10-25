@@ -41,6 +41,9 @@ const Base = styled(RebassButton)<{
 export const ButtonPrimary = styled(Base)`
   background-color: ${({ theme }) => theme.primary1};
   color: white;
+  border-radius: 0;
+  border: 1px solid #fff;
+
   &:focus {
     box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.primary1)};
     background-color: ${({ theme }) => darken(0.05, theme.primary1)};
@@ -57,7 +60,6 @@ export const ButtonPrimary = styled(Base)`
     color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? 'white' : theme.text3)};
     cursor: auto;
     box-shadow: none;
-    border: 1px solid transparent;
     outline: none;
     opacity: ${({ altDisabledStyle }) => (altDisabledStyle ? '0.7' : '1')};
   }
@@ -233,6 +235,8 @@ const ButtonConfirmedStyle = styled(Base)`
 const ButtonErrorStyle = styled(Base)`
   background-color: ${({ theme }) => theme.red1};
   border: 1px solid ${({ theme }) => theme.red1};
+  border-radius: 0;
+  border: 1px solid #fff;
 
   &:focus {
     box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.red1)};
@@ -250,7 +254,6 @@ const ButtonErrorStyle = styled(Base)`
     cursor: auto;
     box-shadow: none;
     background-color: ${({ theme }) => theme.red1};
-    border: 1px solid ${({ theme }) => theme.red1};
   }
 `
 
