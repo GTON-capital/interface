@@ -43,6 +43,9 @@ export interface Colors {
   green1: Color
   yellow1: Color
   yellow2: Color
+
+  // custom
+  gtonGold: Color
 }
 
 export interface Grids {
