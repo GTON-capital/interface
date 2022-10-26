@@ -41,7 +41,6 @@ const Base = styled(RebassButton)<{
 export const ButtonPrimary = styled(Base)`
   background-color: ${({ theme }) => theme.primary1};
   color: white;
-  border-radius: 0;
   border: 1px solid #fff;
 
   &:focus {
@@ -70,7 +69,6 @@ export const ButtonLight = styled(Base)`
   color: ${({ theme }) => theme.primaryText1};
   font-size: 16px;
   font-weight: 500;
-  border-radius: 0;
   border: 1px solid #fff;
 
   &:focus {
@@ -237,7 +235,6 @@ const ButtonConfirmedStyle = styled(Base)`
 
 const ButtonErrorStyle = styled(Base)`
   background-color: ${({ theme }) => theme.gtonGold};
-  border-radius: 0;
   border: 1px solid #fff;
 
   &:focus {
