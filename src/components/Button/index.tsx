@@ -70,6 +70,9 @@ export const ButtonLight = styled(Base)`
   color: ${({ theme }) => theme.primaryText1};
   font-size: 16px;
   font-weight: 500;
+  border-radius: 0;
+  border: 1px solid #fff;
+
   &:focus {
     box-shadow: 0 0 0 1pt ${({ theme, disabled }) => !disabled && darken(0.03, theme.primary5)};
     background-color: ${({ theme, disabled }) => !disabled && darken(0.03, theme.primary5)};
@@ -87,7 +90,7 @@ export const ButtonLight = styled(Base)`
       cursor: auto;
       background-color: ${({ theme }) => theme.primary5};
       box-shadow: none;
-      border: 1px solid transparent;
+      border: 1px solid #fff;
       outline: none;
     }
   }
