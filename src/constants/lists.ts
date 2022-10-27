@@ -1,10 +1,12 @@
 // the Uniswap Default token list lives here
 export const DEFAULT_TOKEN_LIST_URL = 'tokens.uniswap.eth'
-export const GTON_LIST = 'https://raw.githubusercontent.com/PoulWalcker/token-list/testnet/tokens.json'
+export const GTON_TESTNET_LIST = 'https://raw.githubusercontent.com/PoulWalcker/token-list/testnet/tokens.json'
+export const GTON_LIST = 'https://raw.githubusercontent.com/PoulWalcker/token-list/master/tokens.json'
 
 export const DEFAULT_LIST_OF_LISTS: string[] = [
   DEFAULT_TOKEN_LIST_URL,
   GTON_LIST,
+  GTON_TESTNET_LIST,
   't2crtokens.eth', // kleros
   'tokens.1inch.eth', // 1inch
   'synths.snx.eth',
