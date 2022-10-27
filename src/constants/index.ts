@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x385AE8e21BD41B7C9d85C924f350f4237A5380dd'
+export const ROUTER_ADDRESS = '0x9Da1BADa2A7B07f58037B06627Fb28Ba760649af'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -22,6 +22,8 @@ export const PPX = new Token(ChainId.GTON, '0x91e808EAb0164C4391F70E3B713cbF03B7
 export const RTX = new Token(ChainId.GTON, '0x125903322E8cDb419d7496D19E6cd08a8dc4AB17', 18, 'RTX', 'RTX')
 export const BS = new Token(ChainId.GTON, '0x610390D283790915BF2b79bbf1203f1A9d624138', 18, 'BS', 'BurgerSing')
 export const KFC = new Token(ChainId.GTON, '0x21a05C42eB33dDb2b5A363c0eB65449B67D3D430', 18, 'KFC', 'KFC')
+export const GMN_TESTNET = new Token(ChainId.GTON, '0x9356B91608b3cD9624Cf29d4844b7C019cFe5541', 18, 'GMN', 'Gemeni')
+export const PPX_TESTNET = new Token(ChainId.GTON, '0x11ffe57Dd95d33D65800a97caEed7cbE78c357B2', 18, 'PPX', 'Popix')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -29,14 +31,16 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
-  [ChainId.GTON]: [WETH[ChainId.GTON]]
+  [ChainId.GTON]: [WETH[ChainId.GTON]],
+  [ChainId.GTON_TESTNET]: [WETH[ChainId.GTON_TESTNET]]
 }
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR],
-  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON, GMN, PPX, RTX, BS, KFC]
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON, GMN, PPX, RTX, BS, KFC],
+  [ChainId.GTON_TESTNET]: [...WETH_ONLY[ChainId.GTON], GMN_TESTNET, PPX_TESTNET]
 }
 
 /**
