@@ -211,9 +211,10 @@ html {
 
 body {
   min-height: 100vh;
-  background-position: 0 -30vh;
-  background-repeat: no-repeat;
   background: #0A0300;
-  background-image: url('images/bg-pic-ogs.svg')
+  background-image: url('images/bg-pic-ogs.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 `
