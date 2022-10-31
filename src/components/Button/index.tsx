@@ -39,23 +39,23 @@ const Base = styled(RebassButton)<{
 `
 
 export const ButtonPrimary = styled(Base)`
-  background-color: ${({ theme }) => theme.primary1};
+  background-color: ${({ theme }) => theme.ogsBlue};
   color: white;
   border: 1px solid #fff;
 
   &:focus {
     box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.primary1)};
-    background-color: ${({ theme }) => darken(0.05, theme.primary1)};
+    background-color: ${({ theme }) => darken(0.05, theme.ogsBlue)};
   }
   &:hover {
-    background-color: ${({ theme }) => darken(0.05, theme.primary1)};
+    background-color: ${({ theme }) => darken(0.05, theme.ogsBlue)};
   }
   &:active {
     box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.1, theme.primary1)};
-    background-color: ${({ theme }) => darken(0.1, theme.primary1)};
+    background-color: ${({ theme }) => darken(0.1, theme.ogsBlue)};
   }
   &:disabled {
-    background-color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? theme.primary1 : theme.bg3)};
+    background-color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? theme.ogsBlue : theme.bg3)};
     color: ${({ theme, altDisabledStyle }) => (altDisabledStyle ? 'white' : theme.text3)};
     cursor: auto;
     box-shadow: none;
@@ -234,25 +234,25 @@ const ButtonConfirmedStyle = styled(Base)`
 `
 
 const ButtonErrorStyle = styled(Base)`
-  background-color: ${({ theme }) => theme.gtonGold};
+  background-color: ${({ theme }) => theme.ogsBlue};
   border: 1px solid #fff;
 
   &:focus {
-    box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.gtonGold)};
-    background-color: ${({ theme }) => darken(0.05, theme.gtonGold)};
+    box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.ogsBlue)};
+    background-color: ${({ theme }) => darken(0.05, theme.ogsBlue)};
   }
   &:hover {
-    background-color: ${({ theme }) => darken(0.05, theme.gtonGold)};
+    background-color: ${({ theme }) => darken(0.05, theme.ogsBlue)};
   }
   &:active {
-    box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.1, theme.gtonGold)};
-    background-color: ${({ theme }) => darken(0.1, theme.gtonGold)};
+    box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.1, theme.ogsBlue)};
+    background-color: ${({ theme }) => darken(0.1, theme.ogsBlue)};
   }
   &:disabled {
     opacity: 50%;
     cursor: auto;
     box-shadow: none;
-    background-color: ${({ theme }) => theme.gtonGold};
+    background-color: ${({ theme }) => theme.ogsBlue};
   }
 `
 
