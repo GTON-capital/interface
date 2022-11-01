@@ -100,7 +100,7 @@ export default function Pool() {
 
             <div>
               <Text textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0' }}>
-                Don&apos;t see a pool you joined?
+                Don&apos;t see a pool you joined?{' '}
                 <StyledInternalLink id="import-pool-link" to="/find">
                   Import it.
                 </StyledInternalLink>
