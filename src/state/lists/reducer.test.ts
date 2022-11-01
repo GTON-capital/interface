@@ -1,9 +1,8 @@
 import { createStore, Store } from 'redux'
-import { DEFAULT_LIST_OF_LISTS, DEFAULT_TOKEN_LIST_URL } from '../../constants/lists'
+import { DEFAULT_LIST_OF_LISTS } from '../../constants/lists'
 import { updateVersion } from '../global/actions'
 import { fetchTokenList, acceptListUpdate, addList, removeList, selectList } from './actions'
 import reducer, { ListsState } from './reducer'
-import UNISWAP_DEFAULT_TOKEN_LIST from '@uniswap/default-token-list'
 
 const STUB_TOKEN_LIST = {
   name: '',
@@ -443,26 +442,6 @@ describe('list reducer', () => {
       it('puts in all the new lists', () => {
         expect(Object.keys(store.getState().byUrl)).toEqual(DEFAULT_LIST_OF_LISTS)
       })
-      it('all lists are empty', () => {
-        const s = store.getState()
-        Object.keys(s.byUrl).forEach(url => {
-          if (url === DEFAULT_TOKEN_LIST_URL) {
-            expect(s.byUrl[url]).toEqual({
-              error: null,
-              current: UNISWAP_DEFAULT_TOKEN_LIST,
-              loadingRequestId: null,
-              pendingUpdate: null
-            })
-          } else {
-            expect(s.byUrl[url]).toEqual({
-              error: null,
-              current: null,
-              loadingRequestId: null,
-              pendingUpdate: null
-            })
-          }
-        })
-      })
       it('sets initialized lists', () => {
         expect(store.getState().lastInitializedDefaultListOfLists).toEqual(DEFAULT_LIST_OF_LISTS)
       })
@@ -502,10 +481,6 @@ describe('list reducer', () => {
       })
       it('removes lists in the last initialized list of lists', () => {
         expect(store.getState().byUrl['https://unpkg.com/@uniswap/default-token-list@latest']).toBeUndefined()
-      })
-
-      it('adds all the lists in the default list of lists', () => {
-        expect(Object.keys(store.getState().byUrl)).toContain(DEFAULT_TOKEN_LIST_URL)
       })
 
       it('each of those initialized lists is empty', () => {
