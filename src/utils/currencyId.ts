@@ -1,7 +1,8 @@
 import { Currency, ETHER, Token } from '@gton-capital/ogs-sdk'
 
 export function currencyId(currency: Currency): string {
-  if (currency === ETHER) return 'ETH'
+  // ETHER === GCD
+  if (currency === ETHER) return 'GCD'
   if (currency instanceof Token) return currency.address
   throw new Error('invalid currency')
 }
