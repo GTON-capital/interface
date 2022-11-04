@@ -449,20 +449,29 @@ export default function RemoveLiquidity({
     [currencyIdA, currencyIdB, history]
   )
 
+  const [innerLiquidityPercentage, setInnerLiquidityPercentage] = useDebouncedChangeHandler(
+    Number.parseInt(parsedAmounts[Field.LIQUIDITY_PERCENT].toFixed(0)),
+    liquidityPercentChangeCallback
+  )
+
   const handleDismissConfirmation = useCallback(() => {
     setShowConfirm(false)
     setSignatureData(null) // important that we clear signature data to avoid bad sigs
     // if there was a tx hash, we want to clear the input
     if (txHash) {
       onUserInput(Field.LIQUIDITY_PERCENT, '0')
+      if (innerLiquidityPercentage === 100) {
+        history.push('/pool')
+      }
     }
     setTxHash('')
-  }, [onUserInput, txHash])
+  }, [history, innerLiquidityPercentage, onUserInput, txHash])
 
-  const [innerLiquidityPercentage, setInnerLiquidityPercentage] = useDebouncedChangeHandler(
-    Number.parseInt(parsedAmounts[Field.LIQUIDITY_PERCENT].toFixed(0)),
-    liquidityPercentChangeCallback
-  )
+  console.log({
+    isValid,
+    signatureData,
+    approval
+  })
 
   return (
     <>
