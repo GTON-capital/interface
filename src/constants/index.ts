@@ -39,8 +39,8 @@ const WETH_ONLY: ChainTokenList = {
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR],
-  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON, GMN, PPX, RTX, BS, KFC],
-  [ChainId.GTON_TESTNET]: [...WETH_ONLY[ChainId.GTON_TESTNET], GMN_TESTNET, PPX_TESTNET]
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON],
+  [ChainId.GTON_TESTNET]: [...WETH_ONLY[ChainId.GTON_TESTNET], PPX_TESTNET]
 }
 
 /**
@@ -57,14 +57,14 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
-  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON, GMN, PPX]
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
-  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON, GMN, PPX]
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
