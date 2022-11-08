@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { injected } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x383D5CC8ed09FF3291Ac59192cd5d96Dad2625dc'
+export const ROUTER_ADDRESS = '0x3452AAb51419D0D034470d44125F640757f84f8C'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -17,21 +17,9 @@ export const COMP = new Token(ChainId.MAINNET, '0xc00e94Cb662C3520282E6f57172140
 export const MKR = new Token(ChainId.MAINNET, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
 export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
 export const GTON = new Token(ChainId.GTON, '0x7c6b91d9be155a6db01f749217d76ff02a7227f2', 18, 'GTON', 'GTON')
-export const GMN = new Token(ChainId.GTON, '0x6dcfc3a9feef494018233b76cee03f15c7b9264b', 18, 'GMN', 'Gemeni')
-export const PPX = new Token(ChainId.GTON, '0x91e808EAb0164C4391F70E3B713cbF03B7fdC34e', 18, 'PPX', 'Poppix')
-export const RTX = new Token(ChainId.GTON, '0x125903322E8cDb419d7496D19E6cd08a8dc4AB17', 18, 'RTX', 'RTX')
-export const BS = new Token(ChainId.GTON, '0x610390D283790915BF2b79bbf1203f1A9d624138', 18, 'BS', 'BurgerSing')
-export const KFC = new Token(ChainId.GTON, '0x21a05C42eB33dDb2b5A363c0eB65449B67D3D430', 18, 'KFC', 'KFC')
-export const GMN_TESTNET = new Token(
-  ChainId.GTON_TESTNET,
-  '0x9356B91608b3cD9624Cf29d4844b7C019cFe5541',
-  18,
-  'GMN',
-  'Gemeni'
-)
 export const PPX_TESTNET = new Token(
   ChainId.GTON_TESTNET,
-  '0x11ffe57Dd95d33D65800a97caEed7cbE78c357B2',
+  '0x5ee3929c0be1e39ac54f30041ca823dc1757db5e',
   18,
   'PPX',
   'Popix'
