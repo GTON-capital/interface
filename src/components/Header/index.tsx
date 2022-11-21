@@ -5,7 +5,7 @@ import { Text } from 'rebass'
 
 import styled from 'styled-components'
 
-import OGSLogo from '../../assets/svg/OGS_logo.svg'
+import OGXLogo from '../../assets/svg/OGX_logo.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 
@@ -121,7 +121,7 @@ export default function Header() {
       <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
         <HeaderElement>
           <Title href=".">
-            <img src={OGSLogo} alt="logo" />
+            <img src={OGXLogo} alt="logo" />
           </Title>
         </HeaderElement>
         <HeaderControls>

@@ -1,15 +1,15 @@
 {
-  "short_name": "OGS",
-  "name": "OGS",
+  "short_name": "OGX",
+  "name": "OGX",
   "icons": [
     {
-      "src": "./images/OGS_App_icon_192x192.svg",
+      "src": "./images/OGX_App_icon_192x192.svg",
       "sizes": "192x192",
       "type": "image/svg",
       "purpose": "any maskable"
     },
     {
-      "src": "./images/OGS_App_icon_512x512.svg",
+      "src": "./images/OGX_App_icon_512x512.svg",
       "sizes": "512x512",
       "type": "image/svg",
       "purpose": "any maskable"
