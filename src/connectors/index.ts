@@ -27,7 +27,7 @@ export function getNetworkLibrary(): Web3Provider {
 }
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [1000, 50021]
+  supportedChainIds: [5, 1000, 50021]
 })
 
 // mainnet only
@@ -53,6 +53,6 @@ export const portis = new PortisConnector({
 // mainnet only
 export const walletlink = new WalletLinkConnector({
   url: NETWORK_URL,
-  appName: 'OGS',
+  appName: 'OGX',
   appLogoUrl: '/favicon.svg'
 })

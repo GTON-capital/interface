@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { injected } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x3452AAb51419D0D034470d44125F640757f84f8C'
+export const ROUTER_ADDRESS = '0xeC6C00941CFa032230f04fC5bD00913cE58e39BD'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -24,6 +24,8 @@ export const PPX_TESTNET = new Token(
   'PPX',
   'Popix'
 )
+export const LINK_GOERLY = new Token(ChainId.GÖRLI, '0x326C977E6efc84E512bB9C30f76E30c160eD06FB', 18, 'LINK', 'LINK')
+export const GTON_GOERLY = new Token(ChainId.GÖRLI, '0xaAb9F76100e3332dC559878B0EBBf31CC4ab72E6', 18, 'GTON', 'GTON')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -38,6 +40,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
+  [ChainId.GÖRLI]: [...WETH_ONLY[ChainId.GÖRLI], LINK_GOERLY, GTON_GOERLY],
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR],
   [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON],
   [ChainId.GTON_TESTNET]: [...WETH_ONLY[ChainId.GTON_TESTNET], PPX_TESTNET]
@@ -57,14 +60,16 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
-  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON]
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON],
+  [ChainId.GÖRLI]: [...WETH_ONLY[ChainId.GÖRLI], GTON_GOERLY, LINK_GOERLY]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
-  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON]
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON],
+  [ChainId.GÖRLI]: [...WETH_ONLY[ChainId.GÖRLI], GTON_GOERLY, LINK_GOERLY]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
