@@ -108,7 +108,8 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.GÖRLI]: 'Görli',
   [ChainId.KOVAN]: 'Kovan',
   [ChainId.GTON]: 'GTON',
-  [ChainId.GTON_TESTNET]: 'GTON Testnet'
+  [ChainId.GTON_TESTNET]: 'GTON Testnet',
+  [ChainId.GTON_TESTNET_OPTIMISM]: 'GTON Testnet'
 }
 
 export default function Header() {
