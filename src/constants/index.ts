@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { injected } from '../connectors'
 
-export const ROUTER_ADDRESS = '0xA688Cb17d20c12b1318D884A8f4F31Bd272Ee795'
+export const ROUTER_ADDRESS = '0x4FE1913E86BB66F62BDe63112dd5F2c51116d701'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -34,7 +34,8 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
   [ChainId.GTON]: [WETH[ChainId.GTON]],
-  [ChainId.GTON_TESTNET]: [WETH[ChainId.GTON_TESTNET]]
+  [ChainId.GTON_TESTNET]: [WETH[ChainId.GTON_TESTNET]],
+  [ChainId.GTON_TESTNET_OPTIMISM]: [WETH[ChainId.GTON_TESTNET_OPTIMISM]]
 }
 
 // used to construct intermediary pairs for trading
