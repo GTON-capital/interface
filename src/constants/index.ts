@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { injected } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x4b579934CA62B6acA3e22dDd794b59c742d2EEae'
+export const ROUTER_ADDRESS = '0x808e2573C48FA5a64fD98109047753e3394345d2'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -16,16 +16,14 @@ export const USDT = new Token(ChainId.MAINNET, '0xdAC17F958D2ee523a2206206994597
 export const COMP = new Token(ChainId.MAINNET, '0xc00e94Cb662C3520282E6f5717214004A7f26888', 18, 'COMP', 'Compound')
 export const MKR = new Token(ChainId.MAINNET, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
 export const AMPL = new Token(ChainId.MAINNET, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
-export const GTON = new Token(ChainId.GTON, '0x7c6b91d9be155a6db01f749217d76ff02a7227f2', 18, 'GTON', 'GTON')
-export const PPX_TESTNET = new Token(
+export const OGXT = new Token(ChainId.GTON, '0x7c6b91D9Be155A6Db01f749217d76fF02A7227F2', 18, 'OGXT', 'OGXT')
+export const OGXT_TESTNET = new Token(
   ChainId.GTON_TESTNET,
-  '0x5ee3929c0be1e39ac54f30041ca823dc1757db5e',
+  '0x7c6b91D9Be155A6Db01f749217d76fF02A7227F2',
   18,
-  'PPX',
-  'Popix'
+  'OGXT',
+  'OGXT'
 )
-export const LINK_GOERLY = new Token(ChainId.GÖRLI, '0x326C977E6efc84E512bB9C30f76E30c160eD06FB', 18, 'LINK', 'LINK')
-export const GTON_GOERLY = new Token(ChainId.GÖRLI, '0xaAb9F76100e3332dC559878B0EBBf31CC4ab72E6', 18, 'GTON', 'GTON')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -34,17 +32,15 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
   [ChainId.GTON]: [WETH[ChainId.GTON]],
-  [ChainId.GTON_TESTNET]: [WETH[ChainId.GTON_TESTNET]],
-  [ChainId.GTON_TESTNET_OPTIMISM]: [WETH[ChainId.GTON_TESTNET_OPTIMISM]]
+  [ChainId.GTON_TESTNET]: [WETH[ChainId.GTON_TESTNET]]
 }
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.GÖRLI]: [...WETH_ONLY[ChainId.GÖRLI], LINK_GOERLY, GTON_GOERLY],
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR],
-  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON],
-  [ChainId.GTON_TESTNET]: [...WETH_ONLY[ChainId.GTON_TESTNET], PPX_TESTNET]
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], OGXT],
+  [ChainId.GTON_TESTNET]: [...WETH_ONLY[ChainId.GTON_TESTNET], OGXT_TESTNET]
 }
 
 /**
@@ -61,16 +57,16 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
-  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON],
-  [ChainId.GÖRLI]: [...WETH_ONLY[ChainId.GÖRLI], GTON_GOERLY, LINK_GOERLY]
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], OGXT],
+  [ChainId.GÖRLI]: [...WETH_ONLY[ChainId.GÖRLI], OGXT_TESTNET]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT],
-  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], GTON],
-  [ChainId.GÖRLI]: [...WETH_ONLY[ChainId.GÖRLI], GTON_GOERLY, LINK_GOERLY]
+  [ChainId.GTON]: [...WETH_ONLY[ChainId.GTON], OGXT],
+  [ChainId.GÖRLI]: [...WETH_ONLY[ChainId.GÖRLI], OGXT_TESTNET]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {

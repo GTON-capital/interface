@@ -10,8 +10,7 @@ const CHAIN_ID_NETWORK_ARGUMENT: { readonly [chainId in ChainId]: string | undef
   [ChainId.KOVAN]: 'kovan',
   [ChainId.GÖRLI]: 'goerli',
   [ChainId.GTON]: 'gton',
-  [ChainId.GTON_TESTNET]: 'gton testnet',
-  [ChainId.GTON_TESTNET_OPTIMISM]: 'gton testnet'
+  [ChainId.GTON_TESTNET]: 'gton testnet'
 }
 
 export class FortmaticConnector extends FortmaticConnectorCore {
