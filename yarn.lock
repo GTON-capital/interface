@@ -1635,10 +1635,10 @@
     "@ethersproject/properties" "^5.0.0"
     "@ethersproject/strings" "^5.0.0"
 
-"@gton-capital/ogs-sdk@3.0.19":
-  version "3.0.19"
-  resolved "https://registry.yarnpkg.com/@gton-capital/ogs-sdk/-/ogs-sdk-3.0.19.tgz#4ad3b0ac7aca82d5509bab8f4cf633260b7e632a"
-  integrity sha512-8ZSvsBC93zTqbLBAmNKrnnRAmvO5cO1lUWpQXrR8aSiEs2Fll2+rDMGUZ4gSAOPuiFC2HlufEmah5fH5vq0vRw==
+"@gton-capital/ogs-sdk@3.0.20":
+  version "3.0.20"
+  resolved "https://registry.yarnpkg.com/@gton-capital/ogs-sdk/-/ogs-sdk-3.0.20.tgz#829781b3a03e920180887972c55d1b9ae94e3e20"
+  integrity sha512-yWKa0JrpQfkhGGJe7TKIfZYR0YMXT95d8mY77qYGqG6TvHc4Yty2RbMizwEO5nSVZf6nSGnX10oaC+mBkic+7g==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
