@@ -20,6 +20,5 @@
   "theme_color": "#CFA552",
   "background_color": "#0A0300",
   "description": "Swap or provide liquidity on the Uniswap V2 Protocol",
-  "homepage_url": "http://localhost",
   "iconPath": "./images/OGX_App_icon_512x512.svg"
 }
