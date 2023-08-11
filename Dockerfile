@@ -15,4 +15,4 @@ RUN yarn build
 
 EXPOSE 5000
 
-CMD ["npx", "serve", "-s", "build"]
+CMD ["npx", "serve", "-s", "--config", "/usr/src/app/serve.json", "build"]
